@@ -1,22 +1,20 @@
 {
   "name": "ladariha-button",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib src/index.ts",
-    "build2": "vite build",
+    "build-vite": "vite build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist/*",
+    "types/*"
+  ],
+  "types": "./types/index.d.ts",
   "main": "dist/ladariha-button.umd.js",
-  "module": "dist/ladariha-button.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/ladariha-button.es.js",
-      "require": "./dist/ladariha-button.umd.js"
-    }
-  },
   "dependencies": {
     "vue-demi": "^0.11.4"
   },
@@ -30,14 +28,27 @@
     }
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "latest",
-    "@vue/compiler-sfc": "latest",
-    "element-plus": "1.1.0-beta.12",
-    "sass": "latest",
-    "svelte-jsoneditor": "latest",
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.2.1",
     "typescript": "latest",
-    "vite": "latest",
-    "vite-plugin-windicss": "latest",
-    "vue": "^3.2.13"
+    "vue-jest": "^5.0.0-0",
+    "@vitejs/plugin-vue": "latest",
+    "vite": "latest"
   }
 }
