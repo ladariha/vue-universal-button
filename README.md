@@ -1,29 +1,44 @@
-# universal-button
+# universal-button written in Vue3 
 
-## Project setup
+## How to use it
+- no BUILD! The component is published as NPM package in form of source code
+- add dependency:
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+yarn add ladariha-button
 ```
 
-### Compiles and minifies for production
+- import vue file directly
 ```
-yarn build
+import MyButton from "ladariha-button/src/components/MyButton.vue";
 ```
+## Sample usage in Vue2 project:
 
-### Run your unit tests
 ```
-yarn test:unit
-```
+<template>
+  <div id="app">
+    <MyButton />
+    Reactive number: {{ randomNumber }}
+  </div>
+</template>
 
-### Lints and fixes files
-```
-yarn lint
-```
+<script lang="ts">
+import MyButton from "ladariha-button/src/components/MyButton.vue";
+import { defineComponent, ref } from "@vue/composition-api";
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+export default defineComponent({
+  name: "App",
+  components: {
+    MyButton,
+  },
+  setup() {
+    const randomNumber = ref(Math.random());
+
+    setInterval(() => {
+      randomNumber.value = Math.random();
+    }, 3000);
+
+    return { randomNumber };
+  },
+});
+</script>
+```
