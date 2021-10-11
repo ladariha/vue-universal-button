@@ -2,6 +2,7 @@
 
 ## How to use it
 - no BUILD! The component is published as NPM package in form of source code
+- never import anything in this project from `vue` or `@vue/composition-api`, instead use `vue-demi`
 - add dependency:
 ```
 yarn add ladariha-button
