@@ -1,20 +1,15 @@
 {
   "name": "ladariha-button",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib src/index.ts",
-    "build-vite": "vite build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "files": [
-    "dist/*",
-    "types/*"
+    "src/*"
   ],
-  "types": "./types/index.d.ts",
-  "main": "dist/ladariha-button.umd.js",
   "dependencies": {
     "vue-demi": "^0.11.4"
   },
@@ -48,7 +43,5 @@
     "prettier": "^2.2.1",
     "typescript": "latest",
     "vue-jest": "^5.0.0-0",
-    "@vitejs/plugin-vue": "latest",
-    "vite": "latest"
   }
 }

@@ -1,12 +1,10 @@
 import { shallowMount } from "@vue/test-utils";
-import HelloWorld from "@/components/HelloWorld.vue";
+import MyButton from "@/components/MyButton.vue";
 
-describe("HelloWorld.vue", () => {
+describe("MyButton.vue", () => {
   it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg },
-    });
+    const msg = "Click meClick count 0";
+    const wrapper = shallowMount(MyButton);
     expect(wrapper.text()).toMatch(msg);
   });
 });
